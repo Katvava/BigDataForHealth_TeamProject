@@ -14,7 +14,7 @@ def create_training_testing_data(df_adm_notes_clean):
     df_adm_notes_clean = df_adm_notes_clean.reset_index(drop=True)
 
     # Save 30% of the data as validation and test data
-    df_valid_test = df_adm_notes_clean.sample(frac=0.30, random_state=42)
+    df_valid_test = df_adm_notes_clean.sample(frac=0.60, random_state=42)
 
     df_test = df_valid_test.sample(frac=0.5, random_state=42)
     df_valid = df_valid_test.drop(df_test.index)
@@ -26,7 +26,6 @@ def create_training_testing_data(df_adm_notes_clean):
     print('Valid prevalence(n = %d):' % len(df_valid), df_valid.OUTPUT_LABEL.sum() / len(df_valid))
     print('Train all prevalence(n = %d):' % len(df_train_all), df_train_all.OUTPUT_LABEL.sum() / len(df_train_all))
     print('all samples (n = %d)' % len(df_adm_notes_clean))
-    assert len(df_adm_notes_clean) == (len(df_test) + len(df_valid) + len(df_train_all)), 'math didnt work'
 
     # split the training data into positive and negative
     rows_pos = df_train_all.OUTPUT_LABEL == 1
@@ -34,7 +33,7 @@ def create_training_testing_data(df_adm_notes_clean):
     df_train_neg = df_train_all.loc[~rows_pos]
 
     # merge the balanced data
-    df_train = pd.concat([df_train_pos, df_train_neg.sample(n=len(df_train_pos), random_state=42)], axis=0)
+    df_train = pd.concat([df_train_pos.sample(n=15000, random_state=42, replace = True), df_train_neg.sample(n=15000, random_state = 42, replace = True)], axis=0)
 
     # shuffle the order of training samples
     df_train = df_train.sample(n=len(df_train), random_state=42).reset_index(drop=True)
@@ -82,3 +81,7 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+# Accuracy: 0.5860179992174254
+# F1: 0.13254987701557802
+# AUC: 0.59576684653522
