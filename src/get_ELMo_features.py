@@ -12,6 +12,7 @@ from nltk.corpus import stopwords
 import pickle
 import os
 import sys
+from python_get_adm_notes import clean_data
 
 SENTENCE_LEN = 60
 
@@ -122,8 +123,8 @@ def get_sentence_len(Xs):
     return l
 
 def main():
-    # df_adm_notes_clean = clean_data()
-    df_adm_notes_clean = pd.read_pickle("/home/xi/Desktop/df_adm_notes_clean.pkl")
+    df_adm_notes_clean = clean_data()
+    # df_adm_notes_clean = pd.read_pickle("/home/xi/Desktop/df_adm_notes_clean.pkl")
 
     df_train, df_test, df_valid = create_training_testing_data(df_adm_notes_clean)
 
