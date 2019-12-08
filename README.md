@@ -8,6 +8,10 @@ This project is trying to predict ICU readmission in 30 day using [mimic dataset
 
 We used pyspark for ETL. [src/BD4H_ETL.ipynb](https://github.com/Katvava/BigDataForHealth_TeamProject/blob/master/src/BD4H_ETL.ipynb) is a jupyter notebook running on [google colab](https://colab.research.google.com/notebooks/welcome.ipynb#recent=true).
 
+Three major steps for ETL:
+1. For admission table, get the next unexpected admission and calculate the days until next admission;
+2. For notes table, filter discharge summaries;
+3. Merge admission table and notes table, generate labels.
 
 ## Modeling
 
