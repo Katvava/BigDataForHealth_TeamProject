@@ -15,6 +15,8 @@ Three major steps for ETL:
 2. For notes table, filter discharge summaries;
 3. Merge admission table and notes table, generate labels.
 
+This notebook will generate a 'df_adm_notes_clean.pkl', you can find it [here](https://drive.google.com/drive/folders/13PUJeKIsosour6fx4mojJBiPbhIxUovJ?usp=sharing). Move this file to './data' folder for further use.
+
 ## Modeling
 
 We tried multiple models:
