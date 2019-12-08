@@ -7,6 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import f1_score, roc_curve, accuracy_score, auc
 from python_get_adm_notes import clean_data
 import string
+import os
 
 def create_training_testing_data(df_adm_notes_clean):
     # shuffle the samples
