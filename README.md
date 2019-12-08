@@ -25,7 +25,8 @@ We tried multiple models:
 ## Results
 
 Our final results on test set:
-Average loss:     0.3939011799170683
-Average accuracy: 87.10595890872963
-Average f1:       0.10909080327602041
-Average auc:      0.5719323360995515
+
+Average loss:     0.3939011799170683  
+Average accuracy: 87.10595890872963  
+Average f1:       0.10909080327602041  
+Average auc:      0.5719323360995515  
