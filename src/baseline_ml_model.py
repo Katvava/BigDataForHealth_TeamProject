@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from get_bag_of_words_feature import get_bow_feature
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import f1_score, roc_curve, accuracy_score, auc
-
+from python_get_adm_notes import clean_data
 import string
 
 def create_training_testing_data(df_adm_notes_clean):
@@ -50,8 +50,12 @@ def clean_text(df):
     return df
 
 def main():
-    # df_adm_notes_clean = clean_data()
-    df_adm_notes_clean = pd.read_pickle("/home/xi/Desktop/df_adm_notes_clean.pkl")
+    ETL_generated_notes_path = '../data/df_adm_notes_clean.pkl'
+
+    if not os.path.exists(ETL_generated_notes_path)
+        df_adm_notes_clean = clean_data()
+    else:
+        df_adm_notes_clean = pd.read_pickle(ETL_generated_notes_path)
 
     df_train, df_test, df_valid = create_training_testing_data(df_adm_notes_clean)
 

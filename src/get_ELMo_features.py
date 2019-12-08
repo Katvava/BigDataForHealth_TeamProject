@@ -124,6 +124,9 @@ def get_sentence_len(Xs):
 
 def main():
     df_adm_notes_clean = clean_data()
+
+
+
     # df_adm_notes_clean = pd.read_pickle("/home/xi/Desktop/df_adm_notes_clean.pkl")
 
     df_train, df_test, df_valid = create_training_testing_data(df_adm_notes_clean)

@@ -138,8 +138,8 @@ def evaluate(model, device, data_loader, criterion, print_freq=10):
 
             losses.update(loss.item(), target.size(0))
             accuracy.update(compute_batch_accuracy(output, target).item(), target.size(0))
-            f1.update(compute_batch_f1_score(output, target).item(), target.size(0))
-            auc.update(compute_batch_auc_score(output, target).item(), target.size(0))
+            f1.update(compute_batch_f1_score(output, target), target.size(0))
+            auc.update(compute_batch_auc_score(output, target), target.size(0))
 
             y_true = target.detach().to('cpu').numpy().tolist()
             y_pred = output.detach().to('cpu').max(1)[1].numpy().tolist()

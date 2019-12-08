@@ -37,13 +37,6 @@ test_dataset = MedicalDiagnosisDataset(test_seqs['X'], test_seqs['y'], test_len)
 test_loader = DataLoader(dataset=test_dataset, batch_size=BATCH_SIZE, shuffle=False, collate_fn=visit_collate_fn,
                          num_workers=NUM_WORKERS)
 
-ELMO_DIM = 1024
-HIDDEN_DIM = 64
-OUTPUT_DIM = 2
-N_LAYERS = 1
-BIDIRECTIONAL = False
-DROPOUT = 0.4
-
 model = torch.load(PATH_WEIGHT)
 criterion = nn.BCEWithLogitsLoss()
 model.to(device)

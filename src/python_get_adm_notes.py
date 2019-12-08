@@ -6,8 +6,8 @@ import matplotlib.pyplot as plt
 import string
 
 def clean_data(adm_path = '', note_path = ''):
-    adm_path = '/home/xi/Projects/SS_BigData/Project/data/mimic-iii-clinical-database-1.4/ADMISSIONS.csv'
-    note_path = '/home/xi/Projects/SS_BigData/Project/data/mimic-iii-clinical-database-1.4/NOTEEVENTS.csv'
+    adm_path = '../data/mimic-iii-clinical-database-1.4/ADMISSIONS.csv'
+    note_path = '../data/mimic-iii-clinical-database-1.4/NOTEEVENTS.csv'
 
     # read the admissions table
     df_adm = pd.read_csv(adm_path)
