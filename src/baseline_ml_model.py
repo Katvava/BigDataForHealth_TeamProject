@@ -52,7 +52,7 @@ def clean_text(df):
 def main():
     ETL_generated_notes_path = '../data/df_adm_notes_clean.pkl'
 
-    if not os.path.exists(ETL_generated_notes_path)
+    if not os.path.exists(ETL_generated_notes_path):
         df_adm_notes_clean = clean_data()
     else:
         df_adm_notes_clean = pd.read_pickle(ETL_generated_notes_path)
