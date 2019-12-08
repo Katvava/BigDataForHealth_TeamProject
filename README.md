@@ -13,6 +13,8 @@ Three major steps for ETL:
 2. For notes table, filter discharge summaries;
 3. Merge admission table and notes table, generate labels.
 
+**Note**: You need upload the dataset to google drive and modify the corresponding path in order to run the notebook.
+
 ## Modeling
 
 We tried multiple models:
