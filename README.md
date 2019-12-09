@@ -38,10 +38,11 @@ PATH_VALID_LEN = "../data/saved_features/valid_l_before_padding.pkl"
 PATH_TEST_LEN = "../data/saved_features/test_l_before_padding.pkl"  
 
 2. To train our model, in terminal, run 
-> $python run_train_elmo_gru.py.  
+> $python run_train_elmo_gru.py.
+
 This will get pretrained weight saved to "./model_weights/MyRNNELMo.pth'. Learning curves will be saved to './imgs' as well.
 
-3. To test the pretrained model on test data, run  
+3. To test the pretrained model on test data, run
 > $python run_test_elmo_gru.py
 
 ## Results
