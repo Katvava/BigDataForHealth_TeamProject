@@ -6,7 +6,7 @@ This project is trying to predict ICU readmission in 30 day using [mimic dataset
 
 ## ETL
 
-We used pyspark for ETL. [src/BD4H_ETL.ipynb](https://github.com/Katvava/BigDataForHealth_TeamProject/blob/master/src/BD4H_ETL.ipynb) is a jupyter notebook running on [google colab](https://colab.research.google.com/notebooks/welcome.ipynb#recent=true). Run the notebook will generate a file
+We used pyspark for ETL. [src/BD4H_ETL.ipynb](https://github.com/Katvava/BigDataForHealth_TeamProject/blob/master/src/BD4H_ETL.ipynb) is a jupyter notebook running on [google colab](https://colab.research.google.com/notebooks/welcome.ipynb#recent=true).
 
 Three major steps for ETL:
 **Note** We have uploaded csv data needed by this project to google drive: https://drive.google.com/drive/folders/1MVNHUPmywsONxxakSkW0TO58YYERfKKA?usp=sharing
@@ -15,7 +15,7 @@ Three major steps for ETL:
 2. For notes table, filter discharge summaries;
 3. Merge admission table and notes table, generate labels.
 
-This notebook will generate a 'df_adm_notes_clean.pkl', you can find it [here](https://drive.google.com/drive/folders/13PUJeKIsosour6fx4mojJBiPbhIxUovJ?usp=sharing). Move this file to './data' folder for further use.
+This notebook will generate a 'df_adm_notes_clean.pkl', you can find it [here](https://drive.google.com/drive/folders/13PUJeKIsosour6fx4mojJBiPbhIxUovJ?usp=sharing).
 
 ## Modeling
 
