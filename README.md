@@ -29,19 +29,19 @@ Input: Please download data for training and testing from https://drive.google.c
 
 1. Once the data is downloaded, please put them in the following path.
 
-PATH_TRAIN_SEQS = "../data/saved_features/train_data.pkl"
-PATH_VALID_SEQS = "../data/saved_features/valid_data.pkl"
-PATH_TEST_SEQS = "../data/saved_features/test_data.pkl"
-
-PATH_TRAIN_LEN = "../data/saved_features/train_l_before_padding.pkl"
-PATH_VALID_LEN = "../data/saved_features/valid_l_before_padding.pkl"
-PATH_TEST_LEN = "../data/saved_features/test_l_before_padding.pkl"
+PATH_TRAIN_SEQS = "../data/saved_features/train_data.pkl"  
+PATH_VALID_SEQS = "../data/saved_features/valid_data.pkl"  
+PATH_TEST_SEQS = "../data/saved_features/test_data.pkl"  
+  
+PATH_TRAIN_LEN = "../data/saved_features/train_l_before_padding.pkl"  
+PATH_VALID_LEN = "../data/saved_features/valid_l_before_padding.pkl"  
+PATH_TEST_LEN = "../data/saved_features/test_l_before_padding.pkl"  
 
 2. To train our model, in terminal, run 
-> $python run_train_elmo_gru.py.
+> $python run_train_elmo_gru.py.  
 This will get pretrained weight saved to "./model_weights/MyRNNELMo.pth'. Learning curves will be saved to './imgs' as well.
 
-3. To test the pretrained model on test data, run
+3. To test the pretrained model on test data, run  
 > $python run_test_elmo_gru.py
 
 ## Results
