@@ -9,13 +9,13 @@ This project is trying to predict ICU readmission in 30 day using [mimic dataset
 We used pyspark for ETL. [src/BD4H_ETL.ipynb](https://github.com/Katvava/BigDataForHealth_TeamProject/blob/master/src/BD4H_ETL.ipynb) is a jupyter notebook running on [google colab](https://colab.research.google.com/notebooks/welcome.ipynb#recent=true).
 
 Three major steps for ETL:
-**Note** We have uploaded csv data needed by this project to out google drive: https://drive.google.com/drive/folders/1h3juIZWa3T5Wodb4RloKCKM8S_l9CNdb?usp=sharing
+**Note** We have uploaded csv data needed by this project to google drive: https://drive.google.com/drive/folders/1MVNHUPmywsONxxakSkW0TO58YYERfKKA?usp=sharing
 
 1. For admission table, get the next unexpected admission and calculate the days until next admission;
 2. For notes table, filter discharge summaries;
 3. Merge admission table and notes table, generate labels.
 
-**Note**: You need upload the dataset to google drive and modify the corresponding path in order to run the notebook.
+This notebook will generate a 'df_adm_notes_clean.pkl', you can find it [here](https://drive.google.com/drive/folders/13PUJeKIsosour6fx4mojJBiPbhIxUovJ?usp=sharing).
 
 ## Modeling
 
@@ -25,7 +25,7 @@ We tried multiple models:
 2. deep learning model (elmo embedding + GRU)
 
 ## Steps of training deep learning model
-Input: Please download data for training and testing from https://drive.google.com/drive/folders/1b_bMhMR9EdMygp3wWwFsf4NLXKrPwzGY?usp=sharing
+Input: Please download data for training and testing from https://drive.google.com/drive/folders/1jfWLa2L74cflOJi2tRBdvN4jYGsjU7PZ?usp=sharing
 
 1. Once the data is downloaded, please put them in the following path.
 
